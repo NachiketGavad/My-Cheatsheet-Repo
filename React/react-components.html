@@ -35,16 +35,16 @@ export default function Navbar(props) {
     )
 }</code></pre>
             </li>
-            <li>Arrow function <br>
+            <li><b>Arrow function</b><br>
                 Functional Components:
                 Functional components are simple JavaScript functions that take props as an argument and return React
                 elements.
-                <pre class="language-jsx"><code >import React from 'react';
-const FunctionalComponent = (props) => {
+                <pre class="language-jsx"><code >import React from "react";
+const FunctionalComponent = (props) =&gt {
     return (
-    <div>
-        <h1>Hello, {props.name}!</h1>
-    </div>
+    &ltdiv&gt
+        &lth1&gtHello, {props.name}!&lt/h1&gt
+    &lt/div&gt
     );
 };
 export default FunctionalComponent;</code></pre>
@@ -52,31 +52,76 @@ export default FunctionalComponent;</code></pre>
             <li>Class Components:
                 Class components are ES6 classes that extend from React.Component. They have a render method that
                 returns the UI.
-                <pre class="language-jsx"><code>import React, { Component } from 'react';
-
+                <pre class="language-jsx"><code>import React, { Component } from "react";
 class ClassComponent extends Component {
     render() {
     return (
-        <div>
-        <h1>Hello, {this.props.name}!</h1>
-        </div>
+        &ltdiv&gt
+        &lth1&gtHello, {this.props.name}!&lt/h1&gt
+        &lt/div&gt
     );
     }
 }
-
 export default ClassComponent;</code></pre>
             </li>
-            <li>
-                <pre class="language-jsx"><code>
-                </code></pre>
+            <li>React Hooks (Functional Components):
+                With React Hooks, you can add state and other features to functional components. Here's an example using the useState hook:
+                <pre class="language-jsx"><code>import React, { useState } from "react";
+const HookComponent = () =&gt {
+    const [name, setName] = useState("World");
+
+    return (
+    &ltdiv&gt
+        &lth1&gtHello, {name}!&lt/h1&gt
+    &lt/div&gt
+    );
+};
+export default HookComponent;</code></pre>
             </li>
-            <li>
-                <pre class="language-jsx"><code>
-                </code></pre>
+            <li>Higher-Order Components (HOCs):
+                HOCs are functions that take a component and return a new component with additional props.
+                <pre class="language-jsx"><code>import React from 'react';
+
+const withName = (WrappedComponent) =&gt {
+    return class extends React.Component {
+    render() {
+        return &ltWrappedComponent {...this.props} name="World" /&gt;
+    }
+    };
+};
+
+const MyComponent = (props) =&gt {
+    return (
+    &ltdiv&gt
+        &lth1&gtHello, {props.name}!&lt/h1&gt
+    &lt/div&gt
+    );
+};
+
+export default withName(MyComponent);</code></pre>
             </li>
-            <li>
-                <pre class="language-jsx"><code>
-                </code></pre>
+            <li>Render Props:
+                Render props is a technique for sharing code between React components using a prop whose value is a function.
+                jsx
+                <pre class="language-jsx"><code>import React from 'react';
+class NameProvider extends React.Component {
+    render() {
+    return this.props.children('World');
+    }
+}
+
+const MyComponent = () =&gt {
+    return (
+    &ltNameProvider&gt
+        {(name) =&gt (
+        &ltdiv&gt
+            &lth1&gtHello, {name}!&lt/h1&gt
+        &lt/div&gt
+        )}
+    &lt/NameProvider&gt
+    );
+};
+export default MyComponent;</code></pre>
             </li>
         </ol>
     </div>
