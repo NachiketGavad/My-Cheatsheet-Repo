@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="stylesheet" href="prism.css">
+        <script src="prism.js"></script>
+        <link rel="stylesheet" href="style.css">
+    <title>HTML Cheatsheet by CodeWithHarry</title>
+</head>
+
+<body>
+    <nav>
+        <span class="logo"><img src="copy.png" alt=""></span>
+        <div class="content center">
+            React js Cheatsheet
+        </div>
+    </nav>
+    <iframe src="navbar.html" frameborder="0"></iframe>
+    <div class="container">
+        <ol>
+            <label></label>
+            <h3 class="my-3" style="color: rgb(233, 225, 243); font-size: 24px; margin-bottom: 10px;">Components</h3>
+            <li><b>Direct</b>
+                <pre class="language-jsx"><code>import React from 'react'
+export default function Navbar(props) {
+    return (
+    // jsx
+    )
+}</code></pre>
+            </li> 
+            <li>Arrow function <br>
+                Functional Components:
+                Functional components are simple JavaScript functions that take props as an argument and return React elements.                
+                <pre class="language-jsx"><code >import React from 'react';
+const FunctionalComponent = (props) => {
+    return (
+    <div>
+        <h1>Hello, {props.name}!</h1>
+    </div>
+    );
+};
+export default FunctionalComponent;</code></pre>
+            </li>
+            <li>Class Components:
+                Class components are ES6 classes that extend from React.Component. They have a render method that returns the UI.
+                <pre class="language-jsx"><code>import React, { Component } from 'react';
+
+class ClassComponent extends Component {
+    render() {
+    return (
+        <div>
+        <h1>Hello, {this.props.name}!</h1>
+        </div>
+    );
+    }
+}
+
+export default ClassComponent;</code></pre>
+            </li>
+            <li>
+                <pre class="language-jsx"><code>
+                </code></pre>
+            </li>
+            <li>
+                <pre class="language-jsx"><code>
+                </code></pre>
+            </li>
+            <li>
+                <pre class="language-jsx"><code>
+                </code></pre>
+            </li>
+        </ol>
+    </div>
+</body>
+
+</html>
