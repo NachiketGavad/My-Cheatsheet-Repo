@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../libraries/prism.css">
     <script src="../libraries/prism.js"></script>
     <link href="../libraries/bootstrap-5.3.3-min.css" rel="stylesheet">
+    <link href="../libraries/bootstrap-5.3.3-bundle.js" rel="stylesheet">
     <link rel="stylesheet" href="../libraries/style.css">
     <title>My Html Cheatsheet</title>
 </head>
@@ -23,12 +24,7 @@
         </div>
     </nav>
     <div class="container">
-        <ol>
-            <li>React js Components</li>
-            <a href="react-components.html">Components</a>
-            <li>React js Simple Code Snippets</li>
-            <a href="react-simple-code-snippets.html">Components</a>
-        </ol>
+        <ol></ol>
     </div>
     <script src="../js/back.js"></script>
 </body>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="../libraries/prism.css">
+    <script src="../libraries/prism.js"></script>
+    <link href="../libraries/bootstrap-5.3.3-min.css" rel="stylesheet">
+    <link href="../libraries/bootstrap-5.3.3-bundle.js" rel="stylesheet">
+    <link rel="stylesheet" href="../libraries/style.css">
+    <title>My Html Cheatsheet</title>
+</head>
+
+<body>
+    <nav>
+        <a href="#" onclick="goBack()">
+          <i class="fas fa-arrow-left"></i> Back
+        </a>
+        <span class="logo"><img src="copy.png" alt=""></span>
+        <div class="content center">
+            React js Cheatsheet
+        </div>
+    </nav>
+    <div class="container">
+        <ol>
+            <li>React with Hook, useState, textform with onClick and onChange event
+                <pre class="language-jsx"><code>import React,{useState} from 'react'
+export default function Textform() {
+    const handleUpClick = ()=&gt{
+    console.log("upper clicked");
+    setText(text.toUpperCase());
+    }
+
+    const handleOnChange = (event)=&gt{
+    console.log("text changed "+ text);
+    setText(event.target.value)
+    }
+    
+    const [text, setText] = useState("Enter Text Here");
+    return (
+    &ltdiv className="mb-3"&gt
+        &ltdiv className="container"&gt
+            &ltlabel htmlFor="exampleFormControlTextarea1" className="form-label"&gtExample textarea&lt/label&gt
+            &lttextarea className="form-control" value={text} onChange={handleOnChange} id="exampleFormControlTextarea1" rows="8"&gt&lt/textarea&gt
+            &ltbutton className="btn btn-primary" onClick={handleUpClick}&gtConvert to Uppercase&lt/button&gt
+        &lt/div&gt  
+    &lt/div&gt
+    ) 
+}</code></pre>
+<hr>
+<div id="componentDescription">
+    <ol>
+      <li>
+        <strong>Import Statements:</strong> Import the React library and the
+        useState hook from the react package.
+      </li>
+  
+      <li>
+        <strong>Component Function:</strong> Define a functional component named
+        Textform.
+      </li>
+  
+      <li>
+        <strong>useState Hook:</strong> Initialize a state variable named text and
+        a function named setText to update the text state. The initial value of
+        text is set to "Enter Text Here".
+      </li>
+  
+      <li>
+        <strong>handleUpClick Function:</strong> This function is called when the
+        button is clicked. It logs a message to the console and updates the text
+        state by converting its value to uppercase using the toUpperCase() method.
+      </li>
+  
+      <li>
+        <strong>handleOnChange Function:</strong> This function is called when the
+        textarea value changes. It logs a message to the console with the new
+        value of the textarea, and it updates the text state with the new value.
+      </li>
+  
+      <li>
+        <strong>Return Statement:</strong> Render a textarea element with a label
+        and a button. The value of the textarea is bound to the text state
+        variable, and its onChange event is handled by the handleOnChange
+        function. The button's onClick event is handled by the handleUpClick
+        function.
+      </li>
+  
+      <li>
+        In summary, this component provides a textarea where users can input text.
+        They can click a button to convert the text to uppercase. The component
+        utilizes React state to manage the text value and update it dynamically as
+        the user interacts with the textarea and button.
+      </li>
+    </ol>
+  </div>
+  <hr>
+
+<div>
+    <p>I'm getting an error using React: "Invalid DOM property `for`. Did you mean `htmlFor`"</p>
+    <p>When using React, you can't use the for keyword in JSX, since that's a javascript keyword (remember, JSX is javascript so words like for and class can't be used because they have some other special meaning!)
+
+        To circumvent this, React elements use htmlFor instead (see React docs for more information).
+        
+        So, your render function should be (I only replaced for with htmlFor)</p>
+</div>
+            </li>
+        </ol>
+    </div>
+    <script src="../js/back.js"></script>
+</body>
+
+</html>
